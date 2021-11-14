@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Hide Show Password</title>
+</head>
+
+<body>
+
+    <!--Main Wrapper-->
+    <div class="mainWrapper">
+        <div class="container">
+            <label>Enter Password </label>
+            <input type="password" id="inputPassword" value="">
+            <button id="btn" onclick="showHidePassword()">Show Password</button>
+        </div>
+    </div>
+
+    <!-- JavaScript Code here  -->
+    <script>
+        function showHidePassword() {
+            var inputRef = document.getElementById('inputPassword');
+            var btnRef = document.getElementById('btn');
+            
+            if (inputRef.type === "password") {
+                inputRef.type = "text";
+                btnRef.innerText = "Hide Password";
+            }else{
+                inputRef.type = "password";
+                btnRef.innerText = "Show Password";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
